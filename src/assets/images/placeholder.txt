@@ -1,0 +1,12 @@
+This is a placeholder file. You should replace it with the actual images from the original website:
+
+1. instructor.png - Main image of Mahesh Sharmale
+2. Maha_Combo.jpg - Course image
+3. Nagar01.jpg - Physical training image
+4. Nagar02.jpg - Student testimonial image
+5. Thumbnail_1.jpg - YouTube thumbnail
+6. Thumbnail_2.jpg - YouTube thumbnail
+7. वनरक्षक भरती.jpg - Forest guard recruitment image
+
+Copy these images from:
+B:/05_july/UpSkillBro/mahesh-coaching-website/22 july/mahesh.in/My data/

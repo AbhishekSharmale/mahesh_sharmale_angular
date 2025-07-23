@@ -1,0 +1,330 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color palette */
+  --color-navy: #1a237e;
+  --color-orange: #ff6f00;
+  --color-white: #ffffff;
+  --color-gold: #ffc107;
+  --color-green: #2e7d32;
+  --color-gray: #f5f5f5;
+  --color-blue: #2196f3;
+  --color-red: #d32f2f;
+  --color-dark-gray: #333333;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+  scroll-behavior: smooth;
+  color: var(--color-dark-gray);
+  background-color: var(--color-gray);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+  color: var(--color-navy);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Global section styles */
+section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+}
+
+.underline {
+  height: 4px;
+  width: 70px;
+  background: linear-gradient(90deg, var(--color-navy), var(--color-blue));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Reveal animations */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--color-orange);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(255, 111, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background: #e65100;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 111, 0, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-youtube {
+  background: #ff0000;
+  color: white;
+  border: none;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  border: none;
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Mobile CTA */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  text-align: center;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form-control {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-control input:focus ~ label,
+.form-control input:not(:placeholder-shown) ~ label {
+  transform: translateY(-1.5rem);
+  font-size: 0.75rem;
+  color: var(--color-blue);
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--color-navy), var(--color-blue));
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, var(--color-orange), var(--color-gold));
+}
+
+/* Course cards */
+.course-card {
+  .course-badge {
+    background-color: var(--color-orange);
+    color: white;
+  }
+  
+  .detail i {
+    color: var(--color-navy);
+  }
+  
+  .feature i {
+    color: var(--color-green);
+  }
+  
+  .price {
+    color: var(--color-navy);
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  .final {
+    color: var(--color-green);
+    font-weight: 600;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mobile-cta {
+    display: block;
+  }
+  
+  .whatsapp-float {
+    bottom: 90px;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Accessibility */
+:focus {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Dark mode (optional) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-enabled {
+    --color-white: #121212;
+    --color-gray: #1e1e1e;
+    --color-dark-gray: #e0e0e0;
+    
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+}

@@ -1,0 +1,164 @@
+.hero-section {
+  background-color: var(--color-navy);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* Star background */
+.star-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 5s infinite ease-in-out;
+}
+
+.star.medium {
+  width: 3px;
+  height: 3px;
+}
+
+.star.large {
+  width: 4px;
+  height: 4px;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* Geometric shapes */
+.geometric-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.triangle {
+  position: absolute;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transition: transform 0.3s ease-out;
+}
+
+.square {
+  position: absolute;
+  transition: transform 0.3s ease-out;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 0.3s ease-out;
+}
+
+/* Background lines */
+.bg-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg-line {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  animation: line-float 15s infinite ease-in-out;
+}
+
+.bg-line:nth-child(1) { left: 20%; animation-delay: 0s; }
+.bg-line:nth-child(2) { left: 40%; animation-delay: 2s; }
+.bg-line:nth-child(3) { left: 60%; animation-delay: 4s; }
+
+@keyframes line-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
+}
+
+/* Particles */
+.particles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-20px) translateX(20px); }
+}
+
+/* Hero badge */
+.hero-badge {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(31, 38, 135, 0.25);
+}
+
+.badge-icon {
+  font-size: 1.2rem;
+}
+
+/* Glow effect */
+.glow-effect {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Hero buttons */
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+/* Trust indicators */
+.trust-indicator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.trust-indicator:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 80px;
+  }
+}
