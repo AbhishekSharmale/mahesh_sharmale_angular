@@ -61,6 +61,9 @@
 <!-- Hero Section -->
 <app-hero-section [currentLang]="currentLang"></app-hero-section>
 
+<!-- Main content -->
+<main id="main-content">
+
 <!-- About Section -->
 <section id="about" class="about py-20 reveal">
   <div class="container mx-auto px-4">
@@ -75,7 +78,7 @@
             <div class="blob-2"></div>
             <div class="blob-3"></div>
           </div>
-          <img src="assets/images/WhatsApp_Image_2025-07-19_at_12.47.52_94bcc456-removebg-preview.png" alt="महेश शरमाळे सर" class="instructor-image mx-auto rounded-lg shadow-xl" loading="lazy">
+          <img src="assets/images/WhatsApp_Image_2025-07-19_at_12.47.52_94bcc456-removebg-preview.png" alt="महेश शरमाळे सर" class="instructor-image mx-auto rounded-lg shadow-xl" fetchpriority="high">
         </div>
       </div>
       <div class="about-text w-full md:w-1/2">
@@ -326,6 +329,8 @@
   [ngClass]="{'opacity-100': showScrollTop, 'opacity-0': !showScrollTop}">
   <i class="fas fa-arrow-up"></i>
 </button>
+
+</main>
 
 <!-- Footer -->
 <footer class="footer bg-gray-900 text-white py-12">
